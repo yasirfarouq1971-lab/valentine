@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be My Valentine 💜</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    margin-top: 60px;
+}
+
+h1 {
+    font-size: 2.3em;
+}
+
+img {
+    width: 250px;
+    border-radius: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#yesBtn {
+    background: white;
+    color: #ff4d6d;
+}
+
+#noBtn {
+    background: #ff4d6d;
+    color: white;
+    position: absolute;
+}
+
+.musicBtn {
+    background: #ffffff33;
+    color: white;
+}
+
+.heart {
+    position: fixed;
+    font-size: 20px;
+    animation: float 4s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Elaf 💜<br>Will You Be My Valentine? 💌</h1>
+
+<!-- صورتكم هنا -->
+<img src="love.jpg" alt="Us Together 💜">
+
+<br>
+
+<button id="yesBtn" onclick="yesClicked()">Yes 💖</button>
+<button id="noBtn">No 😅</button>
+<br>
+<button class="musicBtn" onclick="playSong()">🎵 Play Our Song</button>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", function() {
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+});
+
+function yesClicked() {
+    document.body.innerHTML = `
+    <div style="margin-top:150px;">
+        <h1>I Love You So Much Elaf 💜</h1>
+        <p>You are my forever Valentine 💍✨</p>
+        <p>— Yasir 💜</p>
+    </div>
+    `;
+    createHearts();
+}
+
+function createHearts() {
+    setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "💜";
+        heart.style.left = Math.random() * 100 + "vw";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 4000);
+    }, 300);
+}
+
+function playSong() {
+    window.open("https://www.youtube.com/results?search_query=عمرو+دياب+و+مالو+لو+ليلة+تهنا+بعيد", "_blank");
+}
+</script>
+
+</body>
+</html>
