@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Elaf 💜</title>
+<style>
+body {
+    text-align:center;
+    font-family: Arial;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color:white;
+    padding-top:100px;
+}
+button{
+    padding:15px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    margin:15px;
+    cursor:pointer;
+}
+#yes{background:white;color:#ff4d6d;}
+#no{background:#ff4d6d;color:white;position:absolute;}
+</style>
+</head>
+<body>
+
+<h1>Elaf 💜<br>Will You Be My Valentine? 💌</h1>
+
+<button id="yes" onclick="love()">Yes 💖</button>
+<button id="no">No 😅</button>
+
+<script>
+const no = document.getElementById("no");
+no.addEventListener("mouseover", ()=>{
+    no.style.left = Math.random()*window.innerWidth+"px";
+    no.style.top = Math.random()*window.innerHeight+"px";
+});
+
+function love(){
+    document.body.innerHTML="<h1>I Love You So Much Elaf 💜<br>— Yasir</h1>";
+}
+</script>
+
+</body>
+</html>
