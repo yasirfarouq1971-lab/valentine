@@ -1,45 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Elaf 💜</title>
+<title>Elaf 💜</title>
+
 <style>
 body {
-    text-align:center;
-    font-family: Arial;
-    background: linear-gradient(to right, #ff758c, #ff7eb3);
-    color:white;
-    padding-top:100px;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+  background: url("love.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: brightness(0.6);
 }
-button{
-    padding:15px 25px;
-    font-size:18px;
-    border:none;
-    border-radius:30px;
-    margin:15px;
-    cursor:pointer;
+
+.container {
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 90%;
 }
-#yes{background:white;color:#ff4d6d;}
-#no{background:#ff4d6d;color:white;position:absolute;}
+
+h1 {
+  font-size: 28px;
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.yes {
+  background-color: white;
+  color: #ff4d6d;
+}
+
+.no {
+  background-color: #ff4d6d;
+  color: white;
+}
+
+.message {
+  display: none;
+  margin-top: 20px;
+  text-align: right;
+  direction: rtl;
+  font-size: 16px;
+  line-height: 1.8;
+}
 </style>
 </head>
+
 <body>
 
-<h1>Elaf 💜<br>Will You Be My Valentine? 💌</h1>
+<div class="container">
+  <h1>Elaf 💜<br>Will You Be My Valentine?</h1>
+  
+  <button class="yes" onclick="showMessage()">Yes 💖</button>
+  <button class="no">No 😅</button>
 
-<button id="yes" onclick="love()">Yes 💖</button>
-<button id="no">No 😅</button>
+  <div class="message" id="loveMessage">
+الوفة حبيبي 💜<br><br>
+
+عيد حب سعيد يا أحلى شي صار بحياتي…<br>
+يا نعمة أحمد الله عليها يومية،<br>
+ويا دعوة تمنّيتها من سنين ورب العالمين حققها إلي.<br><br>
+
+يمكن المسافة اليوم تبعدنا،<br>
+ويمكن أني وياج هسة مطالعين ولا دنتمشة وإيدينا لازمة بعض،<br>
+بس صدگيني…<br>
+گلبي أقرب الج من حبل الوريد،<br>
+وروحي متعرف غير طريقج.<br><br>
+
+باباتي، إنتِ مو بس مرتي…<br>
+إنتِ سكني، وراحتي، وابتسامتي بعد يوم طويل.<br>
+إنتِ الأمان اللي أدوره من أكون ضايع،<br>
+وإنتِ الحضن اللي أشتاقله بكل ليلة.<br><br>
+
+كل ذكرى بينا عزيزة على گلبي،<br>
+وكل لحظة ضحكنا بيها محفورة بذاكرتي.<br>
+وأوعدج، الأيام الجاية أحلى،<br>
+وراح نعيش سوا تفاصيلنا الصغيرة<br>
+اللي تساوي عندي الدنيا كلها.<br><br>
+
+وربي يحفظج إليّ وما يحرمني منج،<br>
+ويخليج إليّ طول العمر.<br>
+ويرزقني منج أحلى أطفال، نهتم بيهم ونربيهم،<br>
+ونكبرهم كدام عيونّا، ونشوف نفسنا بيهم.<br><br>
+
+عيد حب سعيد يروحي ❤️<br>
+وإن شاء الله الأعياد الجاية نحتفل سوا،<br>
+وما تبقى بينا غير مسافة خطوة…<br><br>
+
+زوجج اللي يحبج هواية،<br>
+يسوري 😌💜
+  </div>
+</div>
 
 <script>
-const no = document.getElementById("no");
-no.addEventListener("mouseover", ()=>{
-    no.style.left = Math.random()*window.innerWidth+"px";
-    no.style.top = Math.random()*window.innerHeight+"px";
-});
-
-function love(){
-    document.body.innerHTML="<h1>I Love You So Much Elaf 💜<br>— Yasir</h1>";
+function showMessage() {
+  document.getElementById("loveMessage").style.display = "block";
 }
 </script>
 
